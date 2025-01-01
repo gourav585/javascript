@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modify css using js</title>
+    <style>
+      #main{
+        color: blue;
+        font-size: 60px;
+        text-align: center;
+        cursor: pointer;
+        margin-top: 50px;
+        transition: 1.5s;
+
+      }
+    </style>
+</head>
+<body>
+    <div id="main" onmouseenter="modify()" onmouseleave="unmodify()">gourav rajak</div>
+
+    <script>
+    function modify(){
+        document.getElementById('main').style.fontSize = "100px";
+        document.getElementById('main').style.color = "red";
+    }
+    function unmodify(){
+        document.getElementById('main').style.fontSize = "50px";
+        document.getElementById('main').style.color = "blue";
+    }
+    </script>
+</body>
+</html>

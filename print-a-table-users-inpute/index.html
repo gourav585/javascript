@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>print a table using users input</title>
+    <style>
+        div{
+            border-bottom: 2px solid black; 
+            width: 200px; 
+            margin-bottom: 5px; 
+            padding: 5px; 
+
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var num = prompt("enter a number to print table ");
+        for(var i =1;i<=10;i++){
+            document.write("<div>");
+            document.write(num + " x " + i + " = " + i*num);
+            document.write("</div>");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript clearTimeout</title>
+</head>
+<body>
+    <button onclick="stop()">stop</button>
+    <button onclick="start()">start</button>
+    <script>
+        var my;
+        function start(){
+        my = setTimeout(
+            function(){
+                document.write("<h1>gourav rajak</h>");
+            },
+            5000
+        )
+        }
+        function stop(){
+            clearTimeout(my);
+        }
+    </script>
+</body>
+</html>

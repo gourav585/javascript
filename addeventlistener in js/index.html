@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addeventlistener in js</title>
+</head>
+<body>
+    <div id="count"></div>
+    <button id="btn">click me</button>
+    <button onclick="stop()">stop</button>
+    <script> 
+    var i=0;
+        document.getElementById('btn').addEventListener("click",count)
+        function count(){
+            document.getElementById('count').innerText = i;
+            i++;
+        }
+    
+        document.getElementById('btn').addEventListener("mouseenter",colorchange);
+        function colorchange(){
+            document.getElementById('count').style.color = "red";
+        }
+        function stop(){
+            document.getElementById('btn').removeEventListener("click",count);  //removeEventListener is help to stope any EventListener
+                                                                            // withe help of there function and type like you have click type of EventListener so it si work on only this typr of EventListener
+        }
+
+    </script>
+</body>
+</html>

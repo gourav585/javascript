@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exception handling in javascript</title>
+</head>
+<body>
+    <button onclick="tr()">click me</button>
+    <h1 id="res"></h1>
+    <script>
+        function tr(){
+            try{
+                alert("hello");
+            }
+            catch(err){
+              document.getElementById('res').innerHTML = err;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number validation in javascript</title>
+    <style>
+        #res{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    please enter your number<br>
+    <input type="text" placeholder="enter your number" onkeyup="val(this)">
+    <div id="res"></div>
+    <script>
+        function val(x){
+            if(isNaN(x.value)){
+                document.getElementById('res').innerText = "please enter number only";
+            }
+            else{
+                document.getElementById('res').innerText = " "
+                if(x.value.length >=10){
+                    document.getElementById('res').innerText = "please enter ten digit only";
+                }else{
+                    document.getElementById('res').innerText = "";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

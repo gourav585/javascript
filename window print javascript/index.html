@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window print javascript</title>
+    <style>
+        .logo {
+            color: red;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+
+        }
+    </style>
+</head>
+
+<body id="body">
+    <h1 class="logo">goura rajak</h1>
+    <center>
+        <div>
+            <p  id="data">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam sint laudantium sunt repudiandae
+                veniam consequatur rem, autem expedita est magnam nemo nisi odit. Porro doloribus voluptatum vitae,
+                optio maxime ea corrupti placeat architecto dolore eum eos maiores similique itaque? Nisi, cum.
+                Molestias dolor asperiores iure rem amet repellat vero consequuntur.
+            </p>
+        </div>
+        <button style="display: block; margin: 0 auto;" onclick="printpage()">printpage</button>
+    </center>
+    <script>
+        function printpage(){
+            var body = document.getElementById('body').innerHTML;
+            var data = document.getElementById('data').innerHTML;
+            document.getElementById('body').innerHTML = data;
+            window.print();
+            document.getElementById('body').innerHTML= body;
+        }
+    </script>
+</body>
+
+</html>
