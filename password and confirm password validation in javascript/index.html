@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password and Confirm Password Validation</title>
+    <style>
+        /* General styling */
+        body {
+            background-color: rgb(107, 104, 104);
+            font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .center {
+            background-color: white;
+            margin: auto;
+            padding: 20px;
+            border: 3px solid green;
+            border-radius: 28px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 90%;
+            width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            color: green;
+            font-size: 1.5em;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: black;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: calc(100% - 20px);
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: blue;
+            color: white;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+        #alert{
+            color: red;
+        }
+
+        /* Responsive design */
+        @media screen and (max-width: 480px) {
+            .center {
+                width: 90%;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.2em;
+            }
+
+            button {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h1>login</h1>
+        <label for="username">Username*</label>
+        <input type="text" id="username" placeholder="Enter your username">
+
+        <label for="password">Enter Your Password</label>
+        <input type="password" id="password" placeholder="Enter your password">
+
+        <label for="inputconfirm">Confirm Password</label>
+        <input type="password" id="inputconfirm" placeholder="Confirm your password" onkeyup="check(this)">
+        <error id="alert"></error>
+
+        <button type="button">Done</button>
+        <script>
+            var password = document.getElementById('password');
+            function check(x){
+                if(x.value.length >0){
+                    if(x.value !== password.value){
+                        document.getElementById('alert').innerText = "confirm password does match";
+                    }else{
+                        document.getElementById('alert').innerText = " ";
+                    }
+                }else{
+                    document.getElementById('alert').innerText = "please enter confirm password";
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
